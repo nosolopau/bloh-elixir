@@ -3,6 +3,8 @@ defmodule BlohElixir.Endpoint do
 
   socket "/socket", BlohElixir.UserSocket
 
+  # channel "rooms:*", BlohElixir.RoomChannel
+
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
