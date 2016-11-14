@@ -3,8 +3,6 @@ defmodule BlohElixir.Endpoint do
 
   socket "/socket", BlohElixir.UserSocket
 
-  # channel "rooms:*", BlohElixir.RoomChannel
-
   # Serve at "/" the static files from "priv/static" directory.
   #
   # You should set gzip to true if you are running phoenix.digest
@@ -32,10 +30,13 @@ defmodule BlohElixir.Endpoint do
   plug Plug.MethodOverride
   plug Plug.Head
 
+  # The session will be stored in the cookie and signed,
+  # this means its contents can be read but not tampered with.
+  # Set :encryption_salt if you would also like to encrypt it.
   plug Plug.Session,
     store: :cookie,
     key: "_bloh_elixir_key",
-    signing_salt: "x38bD06Y"
+    signing_salt: "6//jhs8o"
 
   plug BlohElixir.Router
 end

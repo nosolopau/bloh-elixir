@@ -2,7 +2,7 @@ defmodule BlohElixir.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "rooms:*", BlohElixir.RoomChannel
+  # channel "room:*", BlohElixir.RoomChannel
 
   ## Transports
   transport :websocket, Phoenix.Transports.WebSocket
